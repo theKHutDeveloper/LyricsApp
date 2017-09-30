@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.developments.knowledgehut.lyricsapp.MainActivity"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="matrix"
+        app:srcCompat="@drawable/background2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/artistLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="52dp"
+        android:text="Artist:"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/artist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/artistLabel"
+        android:layout_alignBottom="@+id/artistLabel"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginStart="17dp"
+        android:layout_toEndOf="@+id/artistLabel"
+        android:layout_toRightOf="@+id/artistLabel"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/songLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/artistLabel"
+        android:layout_alignStart="@+id/artistLabel"
+        android:layout_below="@+id/artist"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="32dp"
+        android:text="Song:"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/song"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textSize="20sp"
+        android:layout_alignBaseline="@+id/songLabel"
+        android:layout_alignBottom="@+id/songLabel"
+        android:layout_alignLeft="@+id/artist"
+        android:layout_alignStart="@+id/artist" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/song"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="27dp"
+        android:onClick="getLyrics"
+        android:text="Get Me Lyrics"
+        android:textSize="20sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/lyrics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5sp"
+        android:layout_marginLeft="0sp"
+        android:layout_marginRight="0sp"
+        android:layout_marginTop="300sp"
+        android:background="@android:color/transparent"
+        android:scrollbarAlwaysDrawVerticalTrack="false"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+</RelativeLayout>
